@@ -1,6 +1,16 @@
+import {useState} from 'react';
 import './App.css';
 
 function App() {
+
+
+  const [linea1, setLinea1] =  useState('holi');
+  const [linea2, setLinea2] =  useState('holi');
+
+  const onChangeLinea1 = function(evento){
+    alert(evento.target.value)
+  }
+
   return (
     <div className="App">
       <select>
@@ -11,13 +21,13 @@ function App() {
         <option value="philosoraptor">Philosoraptor</option>
         <option value="smart">Smart Guy</option>
       </select> <br />
-      <input type="text" placeholder='mensaje'/> <br />
+      <input onChange={onChangeLinea1} type="text" placeholder='mensaje'/> <br />
       <input type="text" placeholder='mensaje 2'/> <br />
       <button>Exportart</button>
 
       <div>
-        <span>Linea 1</span>
-        <span>Linea 2</span>
+        <span>{linea1}</span>
+        <span>{linea2}</span>
       </div>
 
     </div>
