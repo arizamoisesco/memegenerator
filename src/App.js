@@ -34,7 +34,7 @@ function App() {
       <input onChange={onChangeLinea2} type="text" placeholder='mensaje 2'/> <br />
       <button>Exportart</button>
 
-      <div>
+      <div className='meme'>
         <span>{linea1}</span>
         <br />
         <span>{linea2}</span>
